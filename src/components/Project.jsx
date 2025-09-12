@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ProjectDetails from "./ProjectDetail";
 
 const Project = ({
@@ -11,9 +11,6 @@ const Project = ({
   setPreview,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
-  useEffect(() => {
-    console.log(title)
-  }, [])
   return (
     <>
       <div

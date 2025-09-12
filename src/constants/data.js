@@ -1,227 +1,209 @@
 export const myProjects = [
   {
-    id: 1,
-    title: "E-commerce Platform",
-    description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
-    subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
+    "id": 2,
+    "title": "AI Expense Tracker",
+    "description": "A modern web application for tracking and analyzing personal expenses with the help of artificial intelligence (AI).",
+    "subDescription": [
+      "Developed a full-stack web application using Next.js App Router and TypeScript.",
+      "Implemented a secure authentication system with Clerk integration.",
+      "Used Prisma ORM to manage expense data and transaction history.",
+      "Provided intelligent financial insights and automatic categorization with Google Gemini API integration.",
+      "Designed a modern, responsive, and intuitive user interface using Tailwind CSS and Chart.js for data visualization."
     ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/accessories.jpg",
-    tags: [
+    "href": "https://github.com/frdiskndr/ai-expanse-tracker-nextJs.git",
+    "logo": "/assets/logos/nextjs.svg",
+    "image": "/assets/projects/aiexpenses.png",
+    "tags": [
       {
-        id: 1,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
+        "id": 1,
+        "name": "Next.js",
+        "path": "/assets/logos/nextjs.svg"
       },
       {
-        id: 2,
-        name: ".Net",
-        path: "/assets/logos/dotnet.svg",
+        "id": 2,
+        "name": "TypeScript",
+        "path": "/assets/logos/typescript.svg"
       },
       {
-        id: 3,
-        name: "Ef Core",
-        path: "/assets/logos/efcore.png",
+        "id": 3,
+        "name": "Prisma",
+        "path": "/assets/logos/prisma.svg"
       },
       {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        "id": 4,
+        "name": "TailwindCSS",
+        "path": "/assets/logos/tailwindcss.svg"
       },
-    ],
+      {
+        "id": 5,
+        "name": "Clerk",
+        "path": "/assets/logos/clerk.svg"
+      },
+      {
+        "id": 6,
+        "name": "openRouter",
+        "path": "/assets/logos/openrouter.svg"
+      }
+    ]
   },
   {
-    id: 2,
-    title: "Authentication & Authorization System",
-    description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
-    subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
+    "id": 1,
+    "title": "Go Pocket - RESTful API E-Wallet",
+    "description": "Aplikasi e-wallet sederhana dengan RESTful API untuk mengelola transaksi keuangan seperti top-up dan transfer dana.",
+    "subDescription": [
+      "Mengembangkan backend RESTful API menggunakan Go dengan framework Fiber untuk performa yang cepat dan efisien.",
+      "Mengimplementasikan sistem otentikasi aman menggunakan JWT (JSON Web Tokens) untuk pendaftaran dan login pengguna.",
+      "Menggunakan GORM dan database SQLite untuk manajemen data pengguna, dompet, dan riwayat transaksi.",
+      "Membangun antarmuka pengguna (frontend) yang modern dan responsif dengan React, Vite, dan styling menggunakan TailwindCSS.",
+      "Menyediakan fitur-fitur inti e-wallet seperti top-up saldo, transfer antar pengguna, dan melihat riwayat transaksi."
     ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/auth-system.jpg",
-    tags: [
+    "href": "https://github.com/frdiskndr/Go-Pocket-RestFullApi",
+    "logo": "/assets/logos/go.svg",
+    "image": "/assets/logos/golang.svg",
+    "tags": [
       {
-        id: 1,
-        name: "Auth0",
-        path: "/assets/logos/auth0.svg",
+        "id": 1,
+        "name": "Go",
+        "path": "/assets/logos/go.svg"
       },
       {
-        id: 2,
-        name: "React",
-        path: "/assets/logos/react.svg",
+        "id": 2,
+        "name": "Fiber",
+        "path": "/assets/logos/fiber.svg"
       },
       {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        "id": 3,
+        "name": "SQLite",
+        "path": "/assets/logos/sqlite.svg"
       },
       {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        "id": 4,
+        "name": "React",
+        "path": "/assets/logos/react.svg"
       },
-    ],
+      {
+        "id": 5,
+        "name": "Vite",
+        "path": "/assets/logos/vite.svg"
+      },
+      {
+        "id": 6,
+        "name": "TailwindCSS",
+        "path": "/assets/logos/tailwindcss.svg"
+      }
+    ]
   },
   {
-    id: 3,
-    title: "Blazor Web App",
-    description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
-    subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
-      "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
+    "id": 3,
+    "title": "Netflix Clone",
+    "description": "Aplikasi web replika Netflix sederhana dengan fitur streaming video dan 'nonton bareng' (watch party) secara real-time.",
+    "subDescription": [
+      "Membangun backend menggunakan Node.js dan framework Express.js untuk mengelola rute API dan logika server.",
+      "Mengimplementasikan fungsionalitas streaming video dinamis untuk memutar konten film.",
+      "Menciptakan fitur 'nonton bareng' (watch party) real-time menggunakan Socket.io untuk sinkronisasi video antar pengguna.",
+      "Menggunakan EJS (Embedded JavaScript) sebagai view engine untuk rendering halaman dinamis pada server.",
+      "Mengelola data pengguna dan room 'nonton bareng' dengan database MySQL."
     ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/blazor-app.jpg",
-    tags: [
+    "href": "https://github.com/frdiskndr/netflix-clone",
+    "logo": "/assets/logos/nodejs.svg",
+    "image": "/assets/projects/iflix.png",
+    "tags": [
       {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        "id": 1,
+        "name": "Node.js",
+        "path": "/assets/logos/nodejs.svg"
       },
       {
-        id: 2,
-        name: ".NET Core",
-        path: "/assets/logos/dotnetcore.svg",
+        "id": 2,
+        "name": "Express.js",
+        "path": "/assets/logos/express.svg"
       },
       {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        "id": 3,
+        "name": "EJS",
+        "path": "/assets/logos/ejs.svg"
       },
       {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        "id": 4,
+        "name": "MySQL",
+        "path": "/assets/logos/mysql.svg"
       },
-    ],
+      {
+        "id": 5,
+        "name": "Socket.io",
+        "path": "/assets/logos/socketio.svg"
+      }
+    ]
   },
   {
-    id: 4,
-    title: "C++ Game Engine",
-    description:
-      "A lightweight C++ game engine designed for 2D and 3D game development.",
-    subDescription: [
-      "Built a powerful rendering engine using OpenGL and C++.",
-      "Developed a physics engine with collision detection and particle effects.",
-      "Implemented a scripting system for easy game customization.",
-      "Optimized performance with multi-threading and efficient memory management.",
+    "id": 4,
+    "title": "Shopee Clone",
+    "description": "Replika platform e-commerce Shopee yang menampilkan halaman beranda dinamis dan detail produk, dengan fokus pada pengalaman pengguna yang bersih dan responsif.",
+    "subDescription": [
+      "Membangun aplikasi web menggunakan Next.js App Router dan React untuk struktur yang modern dan efisien.",
+      "Menerapkan desain antarmuka pengguna (UI) yang responsif dengan Tailwind CSS, memastikan tampilan yang optimal di berbagai perangkat.",
+      "Mengembangkan komponen modular seperti kartu produk, kategori, dan flash sale untuk reusabilitas dan skalabilitas.",
+      "Mengintegrasikan fitur navigasi dan pencarian, serta menampilkan data produk dinamis untuk pengalaman berbelanja yang realistis."
     ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/game-engine.jpg",
-    tags: [
+    "href": "https://shopee-clone-kappa-five.vercel.app/",
+    "logo": "/assets/logos/nextjs.svg",
+    "image": "/assets/projects/shopee-clone.png",
+    "tags": [
       {
-        id: 1,
-        name: "C++",
-        path: "/assets/logos/cplusplus.svg",
+        "id": 1,
+        "name": "Next.js",
+        "path": "/assets/logos/nextjs.svg"
       },
       {
-        id: 2,
-        name: "C#",
-        path: "/assets/logos/csharp.svg",
+        "id": 2,
+        "name": "React",
+        "path": "/assets/logos/react.svg"
       },
       {
-        id: 3,
-        name: "Git",
-        path: "/assets/logos/git.svg",
+        "id": 3,
+        "name": "TailwindCSS",
+        "path": "/assets/logos/tailwindcss.svg"
       },
       {
-        id: 4,
-        name: "Microsoft",
-        path: "/assets/logos/microsoft.svg",
-      },
-    ],
+        "id": 4,
+        "name": "MUI",
+        "path": "/assets/logos/mui.svg"
+      }
+    ]
   },
   {
-    id: 5,
-    title: "WordPress Custom Theme",
-    description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
-    subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
+    "id": 5,
+    "title": "LDS Mover Website",
+    "description": "Aplikasi website statis yang dirancang untuk perusahaan jasa pindahan profesional, menampilkan layanan, armada, dan portofolio perusahaan.",
+    "subDescription": [
+      "Mengembangkan website yang cepat dan efisien menggunakan Next.js App Router dan JavaScript.",
+      "Merancang antarmuka pengguna yang modern dan responsif dengan Tailwind CSS untuk pengalaman yang optimal di berbagai perangkat.",
+      "Menampilkan berbagai layanan pindahan, seperti domestik, internasional, dan pemindahan kantor.",
+      "Menyediakan informasi detail tentang armada truk yang tersedia (bak, box, dan cooler) untuk memenuhi kebutuhan pelanggan yang beragam.",
+      "Menambahkan fitur-fitur seperti testimoni klien, portofolio proyek, dan profil perusahaan untuk membangun kredibilitas."
     ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/wordpress-theme.jpg",
-    tags: [
+    "href": "https://lds-mover-website.vercel.app/",
+    "logo": "/assets/logos/nextjs.svg",
+    "image": "/assets/projects/lds-mover-website.png",
+    "tags": [
       {
-        id: 1,
-        name: "WordPress",
-        path: "/assets/logos/wordpress.svg",
+        "id": 1,
+        "name": "Next.js",
+        "path": "/assets/logos/nextjs.svg"
       },
       {
-        id: 2,
-        name: "HTML5",
-        path: "/assets/logos/html5.svg",
+        "id": 2,
+        "name": "JavaScript",
+        "path": "/assets/logos/javascript.svg"
       },
       {
-        id: 3,
-        name: "CSS3",
-        path: "/assets/logos/css3.svg",
-      },
-      {
-        id: 4,
-        name: "Vite.js",
-        path: "/assets/logos/vitejs.svg",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Online Learning Platform",
-    description:
-      "A web application that allows users to enroll in courses, watch video lectures, and take quizzes.",
-    subDescription: [
-      "Built using Blazor WebAssembly for a seamless SPA experience.",
-      "Implemented video streaming with Azure Media Services.",
-      "Added a quiz system with dynamic question generation and real-time grading.",
-      "Integrated Stripe API for secure payment processing.",
-    ],
-    href: "",
-    logo: "",
-    image: "/assets/projects/elearning.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
-      },
-      {
-        id: 2,
-        name: "Azure",
-        path: "/assets/logos/azure.svg",
-      },
-      {
-        id: 3,
-        name: "Stripe",
-        path: "/assets/logos/stripe.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-];
+        "id": 3,
+        "name": "TailwindCSS",
+        "path": "/assets/logos/tailwindcss.svg"
+      }
+    ]
+  }
+]
 
 export const mySocials = [
   {
