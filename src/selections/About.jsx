@@ -3,12 +3,13 @@ import Card from '../components/Card'
 import { Globe } from '../components/globe'
 import CopyEmailButton from '../components/CopyEmailButton'
 import { Frameworks } from '../components/FrameWorks'
+import { PixelateCanvas } from '../components/PixeledCanvas'
 
 
 const About = () => {
     const grid2Container = useRef()
     return (
-        <section className='c-space section-spacing'>
+        <section id='about' className='c-space section-spacing'>
             <h2 className='text-heading'>About Me</h2>
             <div className='grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12'>
                 {/* grid */}
@@ -39,12 +40,13 @@ const About = () => {
                 </div>
                 {/* grid 3 */}
                 <div className="grid-black-color grid-3">
-                    <div className="z-10 w-[50%]">
+                    <div className="w-[50%] relative  z-10">
                         <p className="headtext">Location</p>
                         <p className='subtext'>I'm From Bogor. <br/> West java, Indonesia.</p>
                     </div>
-                    <figure className='absolute left-[30%] top-[10%]'>
+                    <figure className='absolute left-[30%] top-[10%] z-0'>
                         {/* <Globe/> */}
+                        <PixelateCanvas image={"/assets/personal/WhatsApp Image 2025-09-12 at 10.36.32_bb3b048a.jpg"} className={" z-0 absolute top-5 left-1"} height={240} width={400}/>
                     </figure>
                 </div>
                 {/* grid 4 */}
