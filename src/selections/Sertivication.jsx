@@ -6,9 +6,11 @@ const SertivicateComponent = React.lazy(() => import('../components/marque'))
 
 const Sertivication = () => {
     return (
-        <Suspense fallback={<Loader/>}>
-            <SertivicateComponent />
-        </Suspense>
+        <section className='my-20'>
+            <Suspense fallback={<Loader />}>
+                <SertivicateComponent />
+            </Suspense>
+        </section>
 
     )
 }

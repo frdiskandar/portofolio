@@ -64,7 +64,7 @@ const HeroText = () => {
                         variants={variants}
                         initial='hidden'
                         animate='visible'
-                        transition={{ delay: 1.8}}>Webaplication</M.p>
+                        transition={{ delay: 1.8}}>Web aplication</M.p>
                 </div>
             </div>
         </div>
