@@ -31,7 +31,7 @@ You need to have Node.js and npm installed on your machine.
    ```
 2. Navigate to the project directory
    ```sh
-   cd your_repository
+   cd portofolio
    ```
 3. Install NPM packages
    ```sh
