@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
+import emailjs from '@emailjs/browser'
+
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
@@ -28,18 +30,18 @@ const Contact = () => {
 
         try {
             console.log("From submitted:", formData);
-            //   await emailjs.send(
-            //     "service_tfajtyg",
-            //     "template_17us8im",
-            //     {
-            //       from_name: formData.name,
-            //       to_name: "Faried Iskandar",
-            //       from_email: formData.email,
-            //       to_email: "fariditb159@gmail.com",
-            //       message: formData.message,
-            //     },
-            //     "pn-Bw_mS1_QQdofuV"
-            //   );
+              await emailjs.send(
+                "service_h3m9ah2",
+                "template_42qnvlq",
+                {
+                  from_name: formData.name,
+                  to_name: "Faried Iskandar",
+                  from_email: formData.email,
+                  to_email: "fariditb159@gmail.com",
+                  message: formData.message,
+                },
+                "Hi5PONXYjwymNEpam"
+              );
             setTimeout(() => {
                 console.log("hello");
             }, 3000)
@@ -80,7 +82,7 @@ const Contact = () => {
                             name="name"
                             type="text"
                             className="field-input field-input-focus"
-                            placeholder="John Doe"
+                            placeholder="Zulius lusius"
                             autoComplete="name"
                             value={formData.name}
                             onChange={handleChange}
@@ -96,7 +98,7 @@ const Contact = () => {
                             name="email"
                             type="email"
                             className="field-input field-input-focus"
-                            placeholder="JohnDoe@email.com"
+                            placeholder="Zul@email.com"
                             autoComplete="email"
                             value={formData.email}
                             onChange={handleChange}
