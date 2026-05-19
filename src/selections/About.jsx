@@ -29,7 +29,7 @@ const About = () => {
                         </p>
                         <Card
                             style={{ rotate: '75deg', top: '40%', left: '60%' }}
-                            text={"Javascripts"}
+                            text={"Node Js"}
                             containerRef={grid2Container}
                         />
                         <Card

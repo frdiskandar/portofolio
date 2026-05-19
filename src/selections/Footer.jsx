@@ -1,7 +1,9 @@
+'use client'
 import { mySocials } from "../constants/data";
 const Footer = () => {
+  const date = new Date()
     return (
-        <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
+        <section id="footer" className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
             <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
             <div className="flex gap-2">
                 <p>Terms & Conditions</p>
@@ -10,12 +12,12 @@ const Footer = () => {
             </div>
             <div className="flex gap-3">
                 {mySocials.map((social, index) => (
-                    <a href={social.href} key={index}>
-                        <img src={social.icon} className="w-5 h-5" alt={social.name} />
+                    <a href={social.href} key={index} title={social.name}>
+                        <img src={social.icon} className="w-5 h-5 object-cover" alt={social.name} />
                     </a>
                 ))}
             </div>
-            <p>© 2025 Frd. All rights reserved.</p>
+            <p>© {date.getFullYear()} Frd. All rights reserved.</p>
         </section>
     );
 };

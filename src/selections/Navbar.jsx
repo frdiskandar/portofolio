@@ -21,7 +21,7 @@ function Navigation() {
         </Link>
       </li>
       <li className="nav-li">
-          <Link className="nav-link" to="contact" smooth={true} duration={500}>
+          <Link className="nav-link" to="footer" smooth={true} duration={500}>
             Contact
         </Link>
       </li>

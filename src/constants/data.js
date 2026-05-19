@@ -208,19 +208,24 @@ export const myProjects = [
 export const mySocials = [
   {
     name: "WhatsApp",
-    href: "",
+    href: "https://wa.me/6281383156812",
     icon: "/assets/socials/whatsApp.svg",
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/farid26",
+    href: "https://www.linkedin.com/in/faridiskandar26",
     icon: "/assets/socials/linkedIn.svg",
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/qwfrdzy_",
+    href: "https://www.instagram.com/faridiskndr.dev/",
     icon: "/assets/socials/instagram.svg",
   },
+  {
+    name: "Email",
+    href: "mailto:fariditb159@gmail.com",
+    icon: "/assets/socials/mail.png"
+  }
 ];
 
 export const experiences = [
@@ -236,30 +241,6 @@ export const experiences = [
       "Applied modern development tools (Docker, Git, CI/CD pipelines) to improve deployment efficiency and reduce system downtime."
     ]
   },
-  {
-    "title": "Project-Based Intern: Full-Stack Developer",
-    "job": "BTPN Syariah",
-    "date": "April 2024 – June 2024",
-    "contents": [
-      "Developed and deployed a Single Page Application (SPA) using Vue.js for one of the bank’s digital services, significantly enhancing user experience with a responsive and intuitive interface.",
-      "Implemented secure and efficient REST APIs with Golang, supporting user authorization and data protection according to banking standards.",
-      "Collaborated with the backend team to integrate APIs with internal systems, ensuring smooth data flow and system reliability.",
-      "Conducted unit testing and debugging to reduce potential bugs before deployment, ensuring high system stability.",
-      "Gained practical exposure to enterprise-level software development processes and best practices in fintech application security."
-    ]
-  },
-  {
-    "title": "Freelance Web Developer",
-    "job": "Self-Employed",
-    "date": "2023",
-    "contents": [
-      "Developed and launched a community organization website, providing a digital platform for information sharing, event management, and community engagement.",
-      "Built and customized a blog system for a non-profit organization, enabling members to publish articles and updates with an easy-to-manage CMS.",
-      "Designed and implemented a professional company profile website to showcase services, portfolio, and contact details, improving client visibility and online presence.",
-      "Collaborated directly with clients to gather requirements, propose design ideas, and deliver projects on schedule.",
-      "Utilized modern front-end frameworks (React.js, Vue.js) and back-end technologies (Node.js, Golang) to deliver responsive, secure, and scalable websites."
-    ]
-  }
 ]
 
 
