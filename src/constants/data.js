@@ -1,5 +1,53 @@
 export const myProjects = [
   {
+    id: 6,
+    title: "Connferecing-app (zoom clone)",
+    description:
+      "Aplikasi web conferencing real-time untuk membuat, menjadwalkan, dan bergabung ke meeting video dengan autentikasi aman.",
+    subDescription: [
+      "Developed a real-time conferencing web application using Next.js 16 App Router and TypeScript.",
+      "Implemented secure authentication and route protection with Clerk.",
+      "Integrated Stream.io Video SDK for instant meeting, scheduled meeting, personal room, and join-by-link flows.",
+      "Generated Stream authentication tokens securely on the server using Next.js Server Actions.",
+      "Built a responsive and modern meeting interface with Tailwind CSS, shadcn/ui, and Stream video components.",
+    ],
+    href: "https://yoom-meeting-two.vercel.app/",
+    logo: "/assets/logos/nextjs.svg",
+    image: "/assets/projects/conferecing-app.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 3,
+        name: "Stream.io",
+        path: "/assets/logos/stream.svg",
+      },
+      {
+        id: 4,
+        name: "Clerk",
+        path: "/assets/logos/clerk.svg",
+      },
+      {
+        id: 5,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 6,
+        name: "shadcn/ui",
+        path: "/assets/logos/shadcn.svg",
+      },
+    ],
+  },
+  {
     id: 2,
     title: "AI Expense Tracker",
     description:
@@ -48,54 +96,6 @@ export const myProjects = [
     ],
   },
   {
-    id: 1,
-    title: "Go Pocket - RESTful API E-Wallet",
-    description:
-      "Aplikasi e-wallet sederhana dengan RESTful API untuk mengelola transaksi keuangan seperti top-up dan transfer dana.",
-    subDescription: [
-      "Mengembangkan backend RESTful API menggunakan Go dengan framework Fiber untuk performa yang cepat dan efisien.",
-      "Mengimplementasikan sistem otentikasi aman menggunakan JWT (JSON Web Tokens) untuk pendaftaran dan login pengguna.",
-      "Menggunakan GORM dan database SQLite untuk manajemen data pengguna, dompet, dan riwayat transaksi.",
-      "Membangun antarmuka pengguna (frontend) yang modern dan responsif dengan React, Vite, dan styling menggunakan TailwindCSS.",
-      "Menyediakan fitur-fitur inti e-wallet seperti top-up saldo, transfer antar pengguna, dan melihat riwayat transaksi.",
-    ],
-    href: "https://github.com/frdiskndr/Go-Pocket-RestFullApi",
-    logo: "/assets/logos/go.svg",
-    image: "/assets/logos/golang.svg",
-    tags: [
-      {
-        id: 1,
-        name: "Go",
-        path: "/assets/logos/go.svg",
-      },
-      {
-        id: 2,
-        name: "Fiber",
-        path: "/assets/logos/fiber.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 5,
-        name: "Vite",
-        path: "/assets/logos/vite.svg",
-      },
-      {
-        id: 6,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
     id: 3,
     title: "Netflix Clone",
     description:
@@ -122,14 +122,9 @@ export const myProjects = [
         path: "/assets/logos/express.svg",
       },
       {
-        id: 3,
-        name: "EJS",
-        path: "/assets/logos/ejs.svg",
-      },
-      {
         id: 4,
-        name: "MySQL",
-        path: "/assets/logos/mysql.svg",
+        name: "Postgresql",
+        path: "/assets/logos/postgresql.svg",
       },
       {
         id: 5,
@@ -177,7 +172,7 @@ export const myProjects = [
   },
   {
     id: 5,
-    title: "LDS Mover Website",
+    title: "Company Website",
     description:
       "Aplikasi website statis yang dirancang untuk perusahaan jasa pindahan profesional, menampilkan layanan, armada, dan portofolio perusahaan.",
     subDescription: [
@@ -235,7 +230,7 @@ export const mySocials = [
 
 export const experiences = [
   {
-    title: "Full-Stack Developer Intern",
+    title: "Full-Stack Developer",
     job: "PT. Edukaarir Global Nusantara",
     date: "July 2025 – Present",
     contents: [

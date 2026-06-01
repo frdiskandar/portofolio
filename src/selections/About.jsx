@@ -17,7 +17,7 @@ const About = () => {
                     <img src="assets/coding-pov.png" alt="coding-img" className='absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]' />
                     <div className="z-10">
                         <p className='headtext'>Hi, I'm Faried Iskandar</p>
-                        <p className='subtext'>Full-Stack Developer with 2+ years of experience building scalable web applications. Skilled in React.js, Vue.js, Golang, and Node.js,</p>
+                        <p className='subtext'>Full-Stack Developer with 1+ years of experience building scalable web applications. Skilled in React.js, Node.js, and Golang</p>
                     </div>
                     <div className='absolute inset-x-0 pointer-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo'></div>
                 </div>
