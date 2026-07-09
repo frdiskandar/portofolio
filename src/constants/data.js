@@ -59,7 +59,7 @@ export const myProjects = [
       "Provided intelligent financial insights and automatic categorization with Google Gemini API integration.",
       "Designed a modern, responsive, and intuitive user interface using Tailwind CSS and Chart.js for data visualization.",
     ],
-    href: "https://github.com/frdiskndr/ai-expanse-tracker-nextJs.git",
+    href: "https://ai-expanse-tracker-next-js.vercel.app/",
     logo: "/assets/logos/nextjs.svg",
     image: "/assets/projects/aiexpenses.avif",
     tags: [
@@ -107,7 +107,7 @@ export const myProjects = [
       "Menggunakan EJS (Embedded JavaScript) sebagai view engine untuk rendering halaman dinamis pada server.",
       "Mengelola data pengguna dan room 'nonton bareng' dengan database MySQL.",
     ],
-    href: "https://github.com/frdiskndr/netflix-clone",
+    href: "https://github.com/frdiskandar/netflix-clone",
     logo: "/assets/logos/nodejs.svg",
     image: "/assets/projects/iflix.avif",
     tags: [
@@ -218,7 +218,7 @@ export const myProjects = [
       "Merancang desain UI retro 8-bit dengan font Press Start 2P serta dukungan dark/light mode.",
       "Mengintegrasikan animasi circuit board interaktif di halaman utama menggunakan Framer Motion.",
     ],
-    href: "https://github.com/frdiskndr/url-shortener-app",
+    href: "https://url-shortener-app-nu.vercel.app/",
     logo: "/assets/logos/react.svg",
     image: "/assets/projects/shortener-app.avif",
     tags: [
