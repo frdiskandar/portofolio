@@ -13,7 +13,7 @@ export const myProjects = [
     ],
     href: "https://yoom-meeting-two.vercel.app/",
     logo: "/assets/logos/nextjs.svg",
-    image: "/assets/projects/conferecing-app.png",
+    image: "/assets/projects/conferecing-app.avif",
     tags: [
       {
         id: 1,
@@ -61,7 +61,7 @@ export const myProjects = [
     ],
     href: "https://github.com/frdiskndr/ai-expanse-tracker-nextJs.git",
     logo: "/assets/logos/nextjs.svg",
-    image: "/assets/projects/aiexpenses.png",
+    image: "/assets/projects/aiexpenses.avif",
     tags: [
       {
         id: 1,
@@ -109,7 +109,7 @@ export const myProjects = [
     ],
     href: "https://github.com/frdiskndr/netflix-clone",
     logo: "/assets/logos/nodejs.svg",
-    image: "/assets/projects/iflix.png",
+    image: "/assets/projects/iflix.avif",
     tags: [
       {
         id: 1,
@@ -146,7 +146,7 @@ export const myProjects = [
     ],
     href: "https://shopee-clone-kappa-five.vercel.app/",
     logo: "/assets/logos/nextjs.svg",
-    image: "/assets/projects/shopee-clone.png",
+    image: "/assets/projects/shopee-clone.avif",
     tags: [
       {
         id: 1,
@@ -184,7 +184,7 @@ export const myProjects = [
     ],
     href: "https://lds-mover-website.vercel.app/",
     logo: "/assets/logos/nextjs.svg",
-    image: "/assets/projects/lds-mover-website.png",
+    image: "/assets/projects/lds-mover-website.avif",
     tags: [
       {
         id: 1,
@@ -203,9 +203,60 @@ export const myProjects = [
       },
     ],
   },
+
+
+  {
+    id: 7,
+    title: "URL Shortener",
+    description:
+      "Aplikasi web untuk mempersingkat tautan panjang menjadi tautan pendek (5 karakter) yang mudah dibagikan, dilengkapi caching Redis dan analitik request.",
+    subDescription: [
+      "Mengembangkan backend REST API menggunakan Express.js dengan arsitektur modular dan koneksi PostgreSQL + Redis.",
+      "Menerapkan caching Redis untuk URL populer g mempercepat waktu redirect secara signifikan.",
+      "Mencatat setiap akses URL pendek secara detail (IP, User-Agent, referrer) untuk analitik request.",
+      "Membangun frontend React modern dengan TanStack Router, TanStack Query, dan TanStack Form.",
+      "Merancang desain UI retro 8-bit dengan font Press Start 2P serta dukungan dark/light mode.",
+      "Mengintegrasikan animasi circuit board interaktif di halaman utama menggunakan Framer Motion.",
+    ],
+    href: "https://github.com/frdiskndr/url-shortener-app",
+    logo: "/assets/logos/react.svg",
+    image: "/assets/projects/shortener-app.avif",
+    tags: [
+      {
+        id: 1,
+        name: "Express.js",
+        path: "/assets/logos/express.svg",
+      },
+      {
+        id: 2,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 3,
+        name: "PostgreSQL",
+        path: "/assets/logos/postgresql.svg",
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 5,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 6,
+        name: "Vite",
+        path: "/assets/logos/vitejs.svg",
+      },
+    ],
+  },
 ];
 
-export const mySocials = [
+  export const mySocials = [
   {
     name: "WhatsApp",
     href: "https://wa.me/6281383156812",
