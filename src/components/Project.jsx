@@ -1,16 +1,12 @@
-import React, { useState } from "react";
-import ProjectDetails from "./ProjectDetail";
+import { Link } from "react-router-dom";
 
 const Project = ({
+  id,
   title,
-  description,
-  subDescription,
-  href,
-  image,
   tags,
+  image,
   setPreview,
 }) => {
-  const [isHidden, setIsHidden] = useState(false);
   return (
     <>
       <div
@@ -26,26 +22,15 @@ const Project = ({
             ))}
           </div>
         </div>
-        <button
-          onClick={() => setIsHidden(true)}
+        <Link
+          to={`/portofolio/${id}`}
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
-          <img src="assets/arrow-right.svg" className="w-5" />
-        </button>
+          <img src="assets/arrow-right.svg" alt="" className="w-5" />
+        </Link>
       </div>
       <div className="bg-linear-to-r from-transparent via-neutral-700 to-transparent h-px w-full" />
-      {isHidden && (
-        <ProjectDetails
-          title={title}
-          description={description}
-          subDescription={subDescription}
-          image={image}
-          tags={tags}
-          href={href}
-          closeModal={() => setIsHidden(false)}
-        />
-      )}
     </>
   );
 };

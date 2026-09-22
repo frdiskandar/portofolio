@@ -1,45 +1,66 @@
 import { useState } from "react";
 import { motion as M} from "motion/react";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import {Link} from 'react-scroll'
 
-function Navigation() {
+const navItems = [
+  { label: "Home", target: "home" },
+  { label: "About", target: "about" },
+  { label: "Portofolio", to: "/portofolio" },
+  { label: "Contact", target: "footer" },
+];
+
+function Navigation({ onNavigate }) {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <ul className="nav-ul">
-      <li className="nav-li">
-        <Link className="nav-link" to="home" smooth={true} duration={500}>
-            Home
-        </Link>
-      </li>
-      <li className="nav-li">
-          <Link className="nav-link" to="about" smooth={true} duration={500}>
-            About
-        </Link>
-      </li>
-      <li className="nav-li">
-         <Link className="nav-link" to="portofolio" smooth={true} duration={500}>
-            Portofolio
-        </Link>
-      </li>
-      <li className="nav-li">
-          <Link className="nav-link" to="footer" smooth={true} duration={500}>
-            Contact
-        </Link>
-      </li>
+      {navItems.map(({ label, target, to }) => (
+        <li key={label} className="nav-li">
+          {to ? (
+            <RouterLink className="nav-link" to={to} onClick={onNavigate}>
+              {label}
+            </RouterLink>
+          ) : isHome ? (
+            <Link
+              className="nav-link"
+              to={target}
+              smooth={true}
+              duration={500}
+              onClick={onNavigate}
+            >
+              {label}
+            </Link>
+          ) : (
+            <RouterLink
+              className="nav-link"
+              to="/"
+              state={{ scrollTo: target }}
+              onClick={onNavigate}
+            >
+              {label}
+            </RouterLink>
+          )}
+        </li>
+      ))}
     </ul>
   );
 }
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const closeMenu = () => setIsOpen(false);
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
       <div className="mx-auto c-space max-w-7xl">
         <div className="flex items-center justify-between py-2 sm:py-0">
-          <a
-            href="/"
+          <RouterLink
+            to="/"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
+            onClick={closeMenu}
           >
             FRD_DEV
-          </a>
+          </RouterLink>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
@@ -51,7 +72,7 @@ const Navbar = () => {
             />
           </button>
           <nav className="hidden sm:flex">
-            <Navigation />
+            <Navigation onNavigate={closeMenu} />
           </nav>
         </div>
       </div>
@@ -64,7 +85,7 @@ const Navbar = () => {
           transition={{ duration: 1 }}
         >
           <nav className="pb-5">
-            <Navigation />
+            <Navigation onNavigate={closeMenu} />
           </nav>
         </M.div>
       )}

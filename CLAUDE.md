@@ -16,9 +16,20 @@ No testing framework or TypeScript configured — the project is pure JSX.
 
 ## Architecture
 
-A single-page React 19 portfolio app. There is **no client-side router** — navigation is smooth-scroll via `react-scroll`. All sections render sequentially in one page.
+A single-page React 19 portfolio app with **client-side routing via `react-router-dom`** (`BrowserRouter` in `src/main.jsx`). Home section navigation still uses smooth-scroll via `react-scroll`.
 
-### Section Order (`src/App.jsx`)
+### Routes (`src/main.jsx`)
+
+| Route | Page | Description |
+|-------|------|-------------|
+| `/` | `src/pages/Home.jsx` | Landing page — all sections render sequentially |
+| `/portofolio` | `src/pages/PortofolioPage.jsx` | Project grid, cards 2-col mobile / 3-col desktop |
+| `/portofolio/:id` | `src/pages/PortofolioDetailPage.jsx` | Project detail: image, description, tech stack, live link |
+| `*` | redirect → `/` | |
+
+`src/components/Layout.jsx` wraps all routes (Navbar + `<Outlet/>` + Footer + scroll-to-top on navigation).
+
+### Section Order (`src/pages/Home.jsx`)
 
 1. **Navbar** — fixed top, backdrop-blur, scroll links
 2. **Hero** — 3D astronaut model (Three.js), parallax mountains, flip-word heading
@@ -27,12 +38,15 @@ A single-page React 19 portfolio app. There is **no client-side router** — nav
 5. **Experiences** — scroll-driven timeline
 6. **Sertivication** — marquee of certificate images (lazy-loaded)
 7. **Contact** — currently **commented out** (EmailJS form, fully implemented)
-8. **Footer** — social links, copyright
+8. **Footer** — social links, copyright (rendered by `Layout.jsx`, not `Home.jsx`)
 
 ### Key Directories
 
-- `src/selections/` — full-page sections (one per file, named after the section)
-- `src/components/` — reusable UI components (19 files): 3D scenes, animations, cards, timelines, particle effects
+- `src/pages/` — routed pages (Home, Portofolio grid, Portofolio detail)
+- `src/selections/` — home-page sections (one per file, named after the section)
+- `src/components/` — reusable UI components: 3D scenes, animations, card grids, timelines, particle effects
+- `src/components/ui/` — shadcn/ui primitives (`card`, `badge`, `button`) themed via CSS variables in `src/index.css`
+- `src/lib/utils.js` — shadcn `cn()` helper
 - `src/constants/` — content data that drives the portfolio:
   - `data.js` — projects, social links, experience, reviews (the primary data source)
   - `certivicate.js` — certificate filenames
@@ -42,8 +56,9 @@ A single-page React 19 portfolio app. There is **no client-side router** — nav
 
 ### Tech Stack
 
-- **Framework:** React 19, Vite 7
+- **Framework:** React 19, Vite 7, React Router 7 (client-side routing)
 - **Styling:** Tailwind CSS v4 (`@import "tailwindcss"` + `@theme` directive), custom color palette defined in `src/index.css`
+- **UI kit:** shadcn/ui components (`src/components/ui/`), themed with the site palette through CSS variables (`--background`, `--primary`, etc.) in `src/index.css`
 - **3D:** Three.js via `@react-three/fiber` + `@react-three/drei` (astronaut model, particle effects, globe)
 - **Animations:** `motion` v12 (`from "motion/react"`) — successor to Framer Motion
 - **Email:** `@emailjs/browser` (hardcoded service/template keys in Contact section)
@@ -54,4 +69,4 @@ Content is **constants-driven**. Edit `src/constants/data.js` to update projects
 
 ### Deployment
 
-Docker multi-stage build (`Dockerfile`): `node:20-alpine` builds, `nginx:stable-alpine` serves. `docker-compose.yml` maps host 8080 → container 80.
+Docker multi-stage build (`Dockerfile`): `node:26-alpine` builds, `nginx:stable-alpine` serves with an SPA fallback (`nginx.conf` → `try_files ... /index.html`, required for direct URLs like `/portofolio`). `docker-compose.yml` maps host 8888 → container 80.
