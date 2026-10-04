@@ -48,7 +48,7 @@ const ProjectCard = ({ project, index = 0 }) => {
                   variant="outline"
                   className="gap-1.5 border-white/10 bg-white/5 text-neutral-300"
                 >
-                  <img src={tag.path} alt="" className="size-3.5" />
+                  <img src={tag.path} alt="" className="md:size-3.5 size-2.5" />
                   <span className="hidden lg:inline">{tag.name}</span>
                 </Badge>
               ))}

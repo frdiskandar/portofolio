@@ -1,4 +1,32 @@
 export const myProjects = [
+   {
+    id: 8,
+    title: "Database from Scratch (TS)",
+    description:
+      "membuat Database engine dari nol untuk mendalami internal basis data — cara data ditulis, disimpan, dan diambil dari memori maupun disk.",
+    subDescription: [
+      "Membangun RDBMS mini ala SQLite dari nol menggunakan TypeScript tanpa library eksternal.",
+      "Merancang page-based persistent storage 4096 byte per page dengan single-file binary (db.bin).",
+      "Mengimplementasikan serialisasi record untuk tipe INT, FLOAT, TEXT, dan BOOL.",
+      "Membangun SQL lexer, parser, dan executor untuk CREATE TABLE, INSERT, SELECT + WHERE, UPDATE, dan DELETE.",
+      "Menerapkan soft delete flag dan UPDATE via DELETE + INSERT untuk operasi data.",
+    ],
+    href: "https://github.com/frdiskandar/database-from-scratch-ts",
+    logo: "/assets/logos/typescript.svg",
+    image: "/assets/projects/database_fs.gif",
+    tags: [
+      {
+        id: 1,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 2,
+        name: "Node.js",
+        path: "/assets/logos/nodejs.svg",
+      },
+    ],
+  },
   {
     id: 6,
     title: "Connferecing-app (zoom clone)",
@@ -203,8 +231,6 @@ export const myProjects = [
       },
     ],
   },
-
-
   {
     id: 7,
     title: "URL Shortener",
@@ -283,7 +309,7 @@ export const experiences = [
   {
     title: "Full-Stack TypeScript Developer",
     job: "PT. Edukaarir Global Nusantara",
-    date: "July 2025 – June 2026",
+    date: "July 2025 – Ags 2026",
     contents: [
       "Developed a multi-tenant architecture for HRM and LMS ecosystems using Next.js on the client side and Node.js on the server side, serving 100+ users.",
       "Designed complex relational schemas on PostgreSQL and implemented type-safe database queries using Prisma ORM for Enterprise Resource Planning (ERP) module efficiency.",

@@ -1,14 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import { Marquee } from "./marqueComponents";
 
-const secondRow = [
-    "alibabaCertifikat.avif",
-    "codepolitanapp.avif",
-    "dicodingai.avif",
-    "rakaminuiux.avif",
-    "dicodingbackend.avif",
-    "dicodingfrondend.avif"
-];
+import {FirstRow, SecondRow} from "@/constants/certivicate"
 
 const ReviewCard = ({
     img,
@@ -30,7 +23,12 @@ export default function SertivicateComponent() {
     return (
         <div className="relative flex w-full flex-col items-center box-border justify-center overflow-hidden">
             <Marquee reverse pauseOnHover className="[--duration:20s]">
-                {secondRow.map((img, index) => (
+                {FirstRow.map((img, index) => (
+                    <ReviewCard key={index} img={`/assets/sertivicate/${img}`} />
+                ))}
+            </Marquee>
+                 <Marquee pauseOnHover className="[--duration:20s]">
+                {SecondRow.map((img, index) => (
                     <ReviewCard key={index} img={`/assets/sertivicate/${img}`} />
                 ))}
             </Marquee>
