@@ -1,4 +1,47 @@
 export const myProjects = [
+  {
+    id: 3,
+    title: "IFLIX — Watch Together Streaming Platform",
+    description:
+      "Clone streaming ala Netflix dengan fitur watch-together: satu room menonton satu video di posisi yang sama, tersinkron real-time.",
+    subDescription: [
+      "Membangun platform streaming watch-together dengan React 19 + Vite + TypeScript di frontend dan Go (stdlib) di backend.",
+      "Menjadikan backend otoritas tunggal room state (videoId, positionMs, playing, version) dengan sinkronisasi WebSocket (Gorilla) ke semua anggota room.",
+      "Mengimplementasikan kontrol play / pause / seek / change video yang disebar real-time dengan resolusi konflik last-writer-wins pada version.",
+      "Memproxy konten film/series dari upstream API lewat backend Go dengan cache 1 jam (Redis jika ada, in-memory jika tidak) dan alur play-info → claim → redeem.",
+      "Mendukung multi-replica via RabbitMQ + Docker Compose + Nginx dengan kontrak tunggal di proto (rooms.ws.json + homepage.openapi.json). Live demo: https://iflix-lyart.vercel.app.",
+    ],
+    href: "https://github.com/frdiskandar/iflix",
+    logo: "/assets/logos/react.svg",
+    image: "/assets/projects/iflix.webp",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 3,
+        name: "Golang",
+        path: "/assets/logos/golang.svg",
+      },
+      {
+        id: 4,
+        name: "Vite",
+        path: "/assets/logos/vitejs.svg",
+      },
+      {
+        id: 5,
+        name: "Docker",
+        path: "/assets/logos/docker.svg",
+      },
+    ],
+  },
    {
     id: 8,
     title: "Database from Scratch (TS)",
@@ -120,44 +163,6 @@ export const myProjects = [
         id: 6,
         name: "openRouter",
         path: "/assets/logos/openrouter.svg",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Netflix Clone",
-    description:
-      "Aplikasi web replika Netflix sederhana dengan fitur streaming video dan 'nonton bareng' (watch party) secara real-time.",
-    subDescription: [
-      "Membangun backend menggunakan Node.js dan framework Express.js untuk mengelola rute API dan logika server.",
-      "Mengimplementasikan fungsionalitas streaming video dinamis untuk memutar konten film.",
-      "Menciptakan fitur 'nonton bareng' (watch party) real-time menggunakan Socket.io untuk sinkronisasi video antar pengguna.",
-      "Menggunakan EJS (Embedded JavaScript) sebagai view engine untuk rendering halaman dinamis pada server.",
-      "Mengelola data pengguna dan room 'nonton bareng' dengan database MySQL.",
-    ],
-    href: "https://github.com/frdiskandar/netflix-clone",
-    logo: "/assets/logos/nodejs.svg",
-    image: "/assets/projects/iflix.avif",
-    tags: [
-      {
-        id: 1,
-        name: "Node.js",
-        path: "/assets/logos/nodejs.svg",
-      },
-      {
-        id: 2,
-        name: "Express.js",
-        path: "/assets/logos/express.svg",
-      },
-      {
-        id: 4,
-        name: "Postgresql",
-        path: "/assets/logos/postgresql.svg",
-      },
-      {
-        id: 5,
-        name: "Socket.io",
-        path: "/assets/logos/socketio.svg",
       },
     ],
   },
