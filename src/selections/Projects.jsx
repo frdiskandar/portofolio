@@ -5,6 +5,7 @@ import { motion as M, useMotionValue, useSpring } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import Project from "../components/Project";
 import { Button } from "../components/ui/button";
+import { isVideoSource } from "../lib/utils";
 
 
 const Projects = () => {
@@ -40,13 +41,24 @@ const Projects = () => {
                     </Link>
                 </Button>
             </div>
-            {preview && (
-                <M.img
-                    className="fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80"
-                    src={preview}
-                    style={{ x: springX, y: springY }}
-                />
-            )}
+            {preview &&
+                (isVideoSource(preview) ? (
+                    <M.video
+                        className="fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80"
+                        src={preview}
+                        style={{ x: springX, y: springY }}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                    />
+                ) : (
+                    <M.img
+                        className="fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-lg pointer-events-none w-80"
+                        src={preview}
+                        style={{ x: springX, y: springY }}
+                    />
+                ))}
         </section>
     );
 };

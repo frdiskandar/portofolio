@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { isVideoSource } from "../lib/utils";
 
 const ProjectCard = ({ project, index = 0 }) => {
   const { id, title, description, image, tags } = project;
@@ -22,13 +23,25 @@ const ProjectCard = ({ project, index = 0 }) => {
       >
         <Card className="h-full flex-col gap-0 overflow-hidden rounded-2xl border border-white/10 bg-linear-to-b from-midnight to-navy p-0 ring-0 [--card-spacing:0px] transition-all duration-300 hover:-translate-y-1 hover:border-aqua/40 hover:shadow-2xl hover:shadow-aqua/10">
           <div className="relative aspect-video w-full overflow-hidden">
-            <img
-              src={image}
-              alt={title}
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
+            {isVideoSource(image) ? (
+              <video
+                src={image}
+                aria-label={title}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            ) : (
+              <img
+                src={image}
+                alt={title}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            )}
             <div className="absolute inset-0 bg-linear-to-t from-navy/80 via-transparent to-transparent" />
           </div>
           <div className="flex flex-1 flex-col gap-2 p-4 md:p-5">

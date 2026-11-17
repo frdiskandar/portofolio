@@ -1,5 +1,70 @@
 export const myProjects = [
   {
+    id: 10,
+    title: "nusa — Agentic AI Terminal Coding Agent",
+    description:
+      "Coding agent interaktif berbasis terminal yang bisa membaca, menulis, dan mengeksekusi file — dengan model OpenAI-compatible pilihan sendiri atau agent eksternal lewat Agent Client Protocol.",
+    subDescription: [
+      "Membangun coding agent terminal dengan TypeScript dan Ink (React 19) TUI: streaming jawaban, kartu tool yang bisa dilipat, diff inline, rencana, modal izin, tema, dan command palette.",
+      "Menjalankan agent LangGraph milik sendiri terhadap endpoint OpenAI-compatible mana pun (base URL + nama model), tanpa vendor lock-in atau daftar provider hardcoded.",
+      "Menyatukan dua backend agent — lokal dan eksternal — ke satu normalized event stream, sehingga ACP agent seperti Claude Code, Gemini CLI, Codex, OpenCode, Cursor, Copilot, dan goose tampil dengan UI yang sama.",
+      "Menaruh setiap aksi yang mengubah state di balik permission gate dengan mode ask / auto / deny, plus auto-approve untuk tool read-only seperti read_file, list_dir, glob, dan grep.",
+      "Menerapkan arsitektur hexagonal berlapis (domain, application, adapters, ui) yang dijaga dependency-cruiser, dengan target/port bersih dan hanya composition root yang boleh meng-import adapter.",
+      "Membangun konfigurasi berlapis (defaults, global config, .nusa.json proyek, env, flag CLI) dengan schema zod dan perintah `nusa config` yang menunjukkan asal setiap nilai serta menyamarkan secret.",
+      "Menyediakan mode headless (nusa run / -p, output JSON) untuk CI, wizard setup clack, serta preset ACP custom berisi command, args, dan env agent.",
+    ],
+    href: "https://github.com/frdiskandar/Agentic-AI",
+    logo: "/assets/logos/typescript.svg",
+    image: "/assets/projects/aiagent.webm",
+    tags: [
+      {
+        id: 1,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 2,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 3,
+        name: "Node.js",
+        path: "/assets/logos/nodejs.svg",
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Pomodoro — Pixel-Art Focus Timer",
+    description:
+      "Aplikasi pomodoro bergaya pixel-art untuk Android, iOS, dan web: timer 48 blok, siklus istirahat otomatis, todolist, dan statistik produktivitas.",
+    subDescription: [
+      "Membangun aplikasi lintas platform Android, iOS, dan web menggunakan Expo SDK 58, React Native, TypeScript, dan Expo Router.",
+      "Merancang timer 48 blok dengan mode fokus, istirahat pendek, dan istirahat panjang, lengkap dengan siklus otomatis serta istirahat panjang setiap N sesi yang bisa diatur.",
+      "Menyimpan timer berbasis timestamp absolut sehingga sesi tetap berjalan dan tercatat walau aplikasi ditutup.",
+      "Membangun todolist (tambah, centang, hapus, pilih tugas aktif) yang menambah hitungan pomodoro per tugas, plus statistik hari/minggu/bulan dengan grafik aktivitas per jam dan per hari.",
+      "Mengimplementasikan notifikasi lokal (expo-notifications) dan isyarat suara chiptune (expo-audio), dengan kanal notifikasi Android hening saat aplikasi terbuka agar suara tidak dobel.",
+      "Memisahkan state data dan state timer pada reducer + context agar UI tidak re-render setiap tick, dan menyimpan seluruh data secara lokal dengan AsyncStorage tanpa akun atau sinkronisasi.",
+      "Membuat seluruh aset ikon, splash, dan suara secara prosedural lewat script Python supaya tetap tajam pada grid pixel.",
+    ],
+    href: "https://github.com/frdiskandar/pomodoro-app",
+    logo: "/assets/logos/react.svg",
+    image: "/assets/projects/pomoapp.webm",
+    tags: [
+      {
+        id: 1,
+        name: "React Native",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+    ],
+  },
+  {
     id: 3,
     title: "IFLIX — Watch Together Streaming Platform",
     description:

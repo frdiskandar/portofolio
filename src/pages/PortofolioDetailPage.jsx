@@ -4,6 +4,7 @@ import { motion as M } from "motion/react";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { myProjects } from "../constants/data";
 import { Badge } from "../components/ui/badge";
+import { isVideoSource } from "../lib/utils";
 import { Button } from "../components/ui/button";
 
 const PortofolioDetailPage = () => {
@@ -41,12 +42,24 @@ const PortofolioDetailPage = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="mt-6 aspect-video w-full overflow-hidden rounded-2xl border border-white/10">
-          <img
-            src={image}
-            alt={title}
-            decoding="async"
-            className="h-full w-full object-cover"
-          />
+          {isVideoSource(image) ? (
+            <video
+              src={image}
+              aria-label={title}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <img
+              src={image}
+              alt={title}
+              decoding="async"
+              className="h-full w-full object-cover"
+            />
+          )}
         </div>
 
         <h1 className="text-heading mt-8">{title}</h1>
