@@ -379,7 +379,7 @@ export const experiences = [
   {
     title: "Full-Stack TypeScript Developer",
     job: "PT. Edukaarir Global Nusantara",
-    date: "July 2025 – Ags 2026",
+    date: "July 2025 – Sep 2026",
     contents: [
       "Developed a multi-tenant architecture for HRM and LMS ecosystems using Next.js on the client side and Node.js on the server side, serving 100+ users.",
       "Designed complex relational schemas on PostgreSQL and implemented type-safe database queries using Prisma ORM for Enterprise Resource Planning (ERP) module efficiency.",
